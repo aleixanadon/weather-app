@@ -11,14 +11,14 @@ const api: AxiosInstance = axios.create({
   }
 });
 
-api.interceptors.request.use((config) => {
-  // Construimos la URL final manualmente para depuración
-  const fullUrl = `${config.baseURL}${config.url}?${new URLSearchParams(
-    config.params as Record<string, string>
-  ).toString()}`;
+// api.interceptors.request.use((config) => {
+//   // Construimos la URL final manualmente para depuración
+//   const fullUrl = `${config.baseURL}${config.url}?${new URLSearchParams(
+//     config.params as Record<string, string>
+//   ).toString()}`;
 
-  console.log("🌐 Request URL:", fullUrl);
-  return config;
-});
+//   console.log("🌐 Request URL:", fullUrl);
+//   return config;
+// });
 
 export default api;
